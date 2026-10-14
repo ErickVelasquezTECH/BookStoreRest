@@ -16,13 +16,13 @@ public record BookRequest(
 
         String author,
 
-        @NotBlank(message = "Requiere un año de publicacion")
+        @NotNull(message = "Requiere un año de publicacion")
         @Min(value=1450, message = "Debe ser como minimo el año 1450")
         @Max(value = 2100,message = "Debe ser como maximo el año 2100")
         int publicationYear,
 
 
-        @NotBlank(message = "Requiere un numero de paginas")
+        @NotNull(message = "Requiere un numero de paginas")
         @Positive
         int pages
 ) {
